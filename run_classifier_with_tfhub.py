@@ -153,7 +153,7 @@ def create_tokenizer_from_hub_module():
 
 
 def main(_):
-  tf.logging.set_verbosity(tf.logging.INFO)
+  tf.logging.set_verbosity(tf.logging.WARN)
 
   processors = {
       "cola": run_classifier.ColaProcessor,
