@@ -261,17 +261,17 @@ class MLDocProcessor(DataProcessor):
   def get_train_examples(self, data_dir):
     """See base class."""
     return self._create_examples(
-        self._read_tsv(os.path.join(data_dir, f"train.{self.trn_size}.tsv")), "train")
+        self._read_tsv(os.path.join(data_dir, f"train.{self.trn_size}.tsv")), quotechar='"')
 
   def get_dev_examples(self, data_dir):
     """See base class."""
     return self._create_examples(
-        self._read_tsv(os.path.join(data_dir, "test.tsv")), "dev")
+        self._read_tsv(os.path.join(data_dir, "test.tsv")), quotechar='"')
 
   def get_test_examples(self, data_dir):
     """See base class."""
     return self._create_examples(
-        self._read_tsv(os.path.join(data_dir, "dev.tsv")), "test")
+        self._read_tsv(os.path.join(data_dir, "dev.tsv")), quotechar='"')
 
   def get_labels(self):
     """See base class."""
@@ -298,17 +298,17 @@ class CLSProcessor(DataProcessor):
   def get_train_examples(self, data_dir):
     """See base class."""
     return self._create_examples(
-        self._read_tsv(os.path.join(data_dir, f"train.tsv")), "train")
+        self._read_tsv(os.path.join(data_dir, f"train.tsv")), quotechar='"')
 
   def get_dev_examples(self, data_dir):
     """See base class."""
     return self._create_examples(
-        self._read_tsv(os.path.join(data_dir, "test.tsv")), "dev")
+        self._read_tsv(os.path.join(data_dir, "test.tsv")), quotechar='"')
 
   def get_test_examples(self, data_dir):
     """See base class."""
     return self._create_examples(
-        self._read_tsv(os.path.join(data_dir, "test.tsv")), "test")
+        self._read_tsv(os.path.join(data_dir, "test.tsv")), quotechar='"')
 
   def get_labels(self):
     """See base class."""
