@@ -161,6 +161,7 @@ def main(_):
       "mrpc": run_classifier.MrpcProcessor,
       "xnli": run_classifier.XnliProcessor,
       "mldoc": run_classifier.MLDocProcessor,
+      "cls": run_classifier.CLSProcessor,
   }
 
   if not FLAGS.do_train and not FLAGS.do_eval:
